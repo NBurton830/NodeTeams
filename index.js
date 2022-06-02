@@ -100,5 +100,5 @@ const flags = cli.flags;
 	let finalResults = sortedStructure.join('\n');
 
 
-	fs.writeFileSync('output.txt',finalResults);
+	fs.writeFileSync('team-output.txt',finalResults);
 })();
