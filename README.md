@@ -1,4 +1,4 @@
-In order to create the ranked list push to a branch with team-input.txt as unsorted games.
+In order to create the ranked list delete the team-output.txt then  push team-input.txtto a branch as unsorted games.
 
 To run from command-line 
 1. Install Node
