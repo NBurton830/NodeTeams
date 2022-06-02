@@ -13,5 +13,5 @@ jobs:
         run: npm install
       - name: Run the script
         run: node index.js
-      - name: Update the repo
+      - name: Update the repository
         run: git add . && git commit -m "Added team output file" && git push origin test
