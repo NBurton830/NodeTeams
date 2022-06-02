@@ -21,7 +21,7 @@ const flags = cli.flags;
 	await init();
 	// use sdtin to get the input from the user.
 	
-	var sample = fs.readFileSync(input[0],'utf8');
+	var sample = fs.readFileSync(input[0] || './team-input.txt', 'utf8');
 	// variable game is an array of each line in the file
 	const game = sample.split('\n');
 	// map each game and the team with the highest score and the lowest score
