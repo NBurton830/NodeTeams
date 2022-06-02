@@ -19,15 +19,9 @@ const flags = cli.flags;
 	
 	// Initialize the application using the init function.
 	await init();
-	// Log the input and flags
+	// use sdtin to get the input from the user.
 	
-   
-	//Generally the module name and the variable name both are same
-	
-
-	// fs.readFileSync
-	// Sync' part allows the node to read the file synchronusly meaning all file is read first before going through other code. 
-	var sample = fs.readFileSync('./team-input.txt','utf8');
+	var sample = fs.readFileSync(input[0],'utf8');
 	// variable game is an array of each line in the file
 	const game = sample.split('\n');
 	// map each game and the team with the highest score and the lowest score
