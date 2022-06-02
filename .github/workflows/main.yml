@@ -1,9 +1,10 @@
 # github action main.yml template
 name: A workflow for ranked teams
 on: push
-# job to run index.js
+# job to run index.js with output.text
 jobs:
   build:
+    output: team-output.txt
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,7 +18,7 @@ jobs:
         uses: actions/copy-output@v2
         with:
           path: 'team-output.txt'
-          content: '{{{ output.text }}}'
+          content: '{{{ output }}}'
       - name: Update the repo
         run: git add . && git commit -m "Added team output file" && git push origin master
       - name: Create a pull request
