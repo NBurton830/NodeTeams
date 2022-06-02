@@ -13,5 +13,9 @@ jobs:
         run: npm install
       - name: Run the script
         run: node index.js
+      - name: Set Username
+        run: git config --global user.email "nyshawnburton16@gmail.com"
+      - name: Set Name
+        run: git config --global user.name "Nyshawn Burton"
       - name: Update the repository
         run: git add . && git commit -m "Added team output file" && git push origin test
